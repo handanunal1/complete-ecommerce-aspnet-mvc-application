@@ -37,6 +37,6 @@ namespace eTickets.Data
         public DbSet<Producer> Producers { get; set; }
         public DbSet<Movie> Movies { get; set; }
 
-        public DbSet<Cinema> Cinema { get; set; }
+        public DbSet<Cinema> Cinemas { get; set; }
     }
 }

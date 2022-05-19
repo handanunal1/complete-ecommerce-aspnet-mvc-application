@@ -6,6 +6,8 @@
         Comedy,
         Drama,
         Thriller,
-        Documentary
+        Documentary,
+        Horror,
+        Cartoon
     }
 }
