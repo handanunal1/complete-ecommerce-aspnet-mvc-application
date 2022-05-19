@@ -16,9 +16,9 @@ namespace eTickets.Controllers
         {
             //asyncrhonous way
             //
-            var data = await _context.Movies.ToListAsync();
+            var allTheMovies = await _context.Movies.Include(m => m.Cinema).ToListAsync();
 
-            return View();
+            return View(allTheMovies);
         }
     }
 }
