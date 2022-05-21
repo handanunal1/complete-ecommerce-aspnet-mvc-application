@@ -1,6 +1,7 @@
 ﻿using eTickets.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace eTickets.Controllers
@@ -16,7 +17,7 @@ namespace eTickets.Controllers
         {
             //asyncrhonous way
             //
-            var allTheMovies = await _context.Movies.Include(m => m.Cinema).ToListAsync();
+            var allTheMovies = await _context.Movies.Include(n => n.Cinema).OrderBy(n => n.Name).ToListAsync();
 
             return View(allTheMovies);
         }
